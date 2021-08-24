@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  background: black;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+img {
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+a {
+
+  color: #333333;
+
+}
+
+.sidebar {
+  text-align: left;
+  padding: inherit;
+}

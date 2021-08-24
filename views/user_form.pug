@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .sidebar
+    block sidebar
+      |<a href='/catalog'>
+      |  <img alt="ncssm" src='/images/ncssm.png'
+      |  width=75" height="75">
+      |</a>
+  h1= title
+
+  form(method='POST' action='')
+
+    div.form-group
+      label(for='username') Username:
+      input#username.form-control(type='text', placeholder='user' name='username' value=(undefined===user ? '' : user.username) required='true')
+      
+      div.form-group
+      label(for='email') Email:
+      input#password.form-control(type='email', placeholder='email' name='email' value=(undefined===email ? '' : user.email) required='true')
+
+      div.form-group
+      label(for='password') Password:
+      input#password.form-control(type='text', placeholder='pass' name='password' value=(undefined===password ? '' : user.password) required='true')
+
+
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      li Username must be unique

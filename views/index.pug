@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  |<script>
+  |function signUp() {
+  | var catalog = require('../routes/catalog');
+  | catalog.get('/user/create', user_controller.user_create_get);
+  |}
+  |</script>
+  .sidebar
+    block sidebar
+      |<a href='/catalog'>
+      |  <img alt="ncssm" src='/images/ncssm.png'
+      |  width=75" height="75">
+      |</a>
+  h1= title
+  p 
+
+
+  if error
+    p Error getting dynamic content.
+  else
+    p
+      br
+      p2
+      |<form action="/catalog/verify">
+      |  <input type="submit" value="Log In" />
+      |</form>
+
+      br
+      p3
+      |<form action="/catalog/user/create">
+      |  <input type="submit" value="Sign Up" />
+      |</form>
+
+      br
+      p4
+      |<form action="/catalog/Leaderboard">
+      |  <input type="submit" value="leaderboard" />
+      |</form>
+
+      br
+      p2
+      |<form action="/catalog/flappybird">
+      |  <input type="submit" value="flap" />
+      |</form>
